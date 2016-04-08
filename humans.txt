@@ -1,0 +1,14 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+
+/* TEAM */
+  <your title>: HJC
+  Twitter: @hjcnewmedia
+  Location: hjcnewmedia.com
+
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: jQuery
+  Software: WordPress

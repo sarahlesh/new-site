@@ -1,0 +1,30 @@
+/*
+====================================
+Default Styling
+====================================
+*/
+
+img {
+	max-width: 100%;
+}
+
+body {
+	color: #333;
+}
+
+.container{
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+.full {
+	width: 100%;
+}
+
+.green{
+	color: $green;
+}
+
+.none{
+	display: none;
+}

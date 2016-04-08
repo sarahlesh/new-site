@@ -1,0 +1,57 @@
+.front-head{
+	background-attachment: fixed; 
+	background-repeat:no-repeat;
+	background-position: center;
+	background-size:cover;
+	text-align: center;
+	color: white;
+	h1{
+		font-weight: 100;
+
+	}
+	h2{
+		font-size: 30px;
+		font-weight: 100;
+		color: #959494;
+		padding: 60px 0 40px 0;
+	}
+	.button{
+		display: inline-block;
+		width: 205px;
+		padding: 30px 0;
+		border: 1px solid white;
+		color: white;
+		text-transform: uppercase;
+		font-size: 14px;
+		&:hover{
+			background: $green;
+		}
+	}
+	.project{
+		margin-left: 25px;
+	}
+} 
+
+.front-head-content{
+	padding: 200px 0 120px;
+}
+
+.logobar{
+	text-align: left;
+	padding: 10px 0;
+	position: fixed;
+	width: 100%;
+}
+
+.middle{
+	margin-left: 20px;
+	position: relative;
+	 top: 50%;
+	 transform: translateY(-140%);
+}
+
+
+.logobar.dark{
+	background: $darkgrey;
+	border-bottom: 1px solid #4e4e4e;
+}
