@@ -98,7 +98,7 @@ img {
 }
 
 body{
-	font-family: 'Open Sans', sans-serif;
+	font-family: $open;
 	line-height: 1.5;
 }
 p{
@@ -107,9 +107,9 @@ p{
 }
 
 h1, h3{
-	font-family: 'Libre Baskerville', serif;
+	font-family: $bask;
 }
 
-h1{
+h1{ 
 	font-size: 64px;
-}
+} 

@@ -28,3 +28,29 @@ body {
 .none{
 	display: none;
 }
+
+.button{
+	border: 1px solid $green;
+	color: $green;
+	padding: 20px 0;
+	min-width: 250px;
+}
+
+.hjc{
+	color: $green;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+
+}
+
+.left{
+	float: left;
+}
+
+.right{
+	float: right;
+}
+
+.bold{
+	font-weight: 700;
+}
