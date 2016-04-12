@@ -15,6 +15,8 @@ function theme_setup() {
 	add_image_size('square', 150, 150, true);
 	add_image_size('background', 2300, 1000, true);
 	add_image_size('case-study', 500, 360, true);
+	add_image_size("client-quote", 80, 80, true );
+	add_image_size("client-logo", 300, 200, true );
 
 
 	// Add default posts and comments RSS feed links to head
@@ -45,7 +47,7 @@ add_action( 'after_setup_theme', 'theme_setup' );
 We'll let WordPress add them to our templates automatically instead
 of writing our own script tags in the header and footer. */
 
-function hackeryou_scripts() {
+function hjc_scripts() {
 
 	//Don't use WordPress' local copy of jquery, load our own version from a CDN instead
 	wp_deregister_script('jquery');
@@ -66,15 +68,40 @@ function hackeryou_scripts() {
   );
 
   wp_enqueue_script(
+    'moment', //handle
+    get_template_directory_uri() . '/node_modules/moment/moment.js', //source
+    array( 'jquery', 'plugins' ), //dependencies
+    null, // version number
+    true //load in footer
+  );
+
+  wp_enqueue_script(
+    'moment-timezone', //handle
+    get_template_directory_uri() . '/node_modules/moment-timezone/moment-timezone.js', //source
+    array( 'jquery', 'plugins', 'moment' ), //dependencies
+    null, // version number
+    true //load in footer
+  );
+
+  wp_enqueue_script(
+    'flickity', //handle
+    get_template_directory_uri() . '/js/flickity.js', //source
+    array( 'jquery', 'plugins' ), //dependencies
+    null, // version number
+    true //load in footer
+  );
+
+  wp_enqueue_script(
     'scripts', //handle
     get_template_directory_uri() . '/js/scripts.js', //source
-    array( 'jquery', 'plugins' ), //dependencies
+    array( 'jquery', 'plugins', 'moment', 'moment-timezone' ), //dependencies
     null, // version number
     true //load in footer
   );
 }
 
-add_action( 'wp_enqueue_scripts', 'hackeryou_scripts' );
+
+add_action( 'wp_enqueue_scripts', 'hjc_scripts' );
 
 
 /* Custom Title Tags */

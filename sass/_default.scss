@@ -40,6 +40,7 @@ body {
 	color: $green;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 700;
+	text-transform: lowercase;
 
 }
 
@@ -53,4 +54,8 @@ body {
 
 .bold{
 	font-weight: 700;
+}
+
+.section{
+	padding:70px 0;
 }

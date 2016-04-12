@@ -38,9 +38,10 @@
 	<div class="studies clearfix">
 	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 		<?php while( has_sub_field('case_studies') ): ?>
-			<?php $image = get_sub_field('image'); ?>
+			<?php $image = get_sub_field('image'); 
+				$alt = $image['alt'] ?>
 			<a href="#" class="study">
-				<img src="<?php echo $image['sizes']['case-study'] ?>" alt="">
+				<img src="<?php echo $image['sizes']['case-study'] ?>" alt="<?php echo $alt ?>">
 					<div class="study-content">
 						<div class="study-content-title">
 								<div class="left">
@@ -69,12 +70,18 @@
 	<?php if ( $projectQuery->have_posts() ) : ?>
 
 		<?php while ($projectQuery->have_posts()) : $projectQuery->the_post(); ?>
-
-			<div class="quote container none">
-				<blockquote><?php the_field('client_quote'); ?></blockquote>
-				<p class="quote_name bold"><?php the_field('quoted_from'); ?></p>
-				<p class="quote_title"><?php the_field('quoted_person_title'); ?></p>
-				<p class="quote_org bold"><?php the_field('quoted_person_organization'); ?></p>
+			<?php $image = get_field('quoted_person_image'); 
+					$alt = $image['alt']; ?>
+			<div class="quote container none clearfix">
+			<div class="client-image">
+					<img src="<?php echo $image['sizes']['client-quote'] ?>" alt="<?php echo $alt ?>">
+				</div>
+				<blockquote><div class="actual-quote"><?php the_field('client_quote'); ?></div></blockquote>
+				<div class="quoted-from">
+					<p class="quote_name bold"><?php the_field('quoted_from'); ?></p>
+					<p class="quote_title"><?php the_field('quoted_person_title'); ?>,</p> 
+					<p class="quote_org bold"><?php the_field('quoted_person_organization'); ?></p>
+				</div>
 			</div>
 
 
@@ -85,6 +92,25 @@
 	<?php else:  ?>
 		[stuff that happens if there aren't any posts]
 	<?php endif; ?>
+</section>
+
+<!-- Who we've helped -->
+
+<section class="helped container section">
+	<h1>Who we've helped</h1>
+	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+		<?php while( has_sub_field('clients_helped') ): ?>
+			<?php $logo = get_sub_field('logo');
+			$alt = $logo['alt'];  ?>
+				<div class="client-logo">
+					<img src="<?php echo $logo['sizes']['client-logo'] ?>" alt="<?php echo $alt ?>">
+				</div>
+		<?php endwhile; // end the loop?>
+	<?php endwhile; // end the loop?>
+	<?php wp_reset_query(); ?>
+
+
+	
 </section>
 
 <!-- Footer -->

@@ -81,23 +81,81 @@
 .quotes{
 	background-color: $green;
 	color: white;
+	position: relative;
+	padding: 40px 0;
 	blockquote{
 		background: none;
 		font-size: 	35px;
 		font-weight: 100;
 		text-align: left;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-direction: row;
+		flex-direction: row;
+		-webkit-align-items: center;
+		  align-items: center;
+		  padding:40px 0 0 0;
 
 		.hjc{
 			color: white;
 		}
 	}
-	blockquote::before{
-		content: "❛❛";
-		font-size: 	300px;
+	blockquote::before{ 
+		content: "";
 		color:  #adbd4a;
-		line-height:1;
-		position: absolute;
+		background-image: url('sass/quotes.svg');
+		width: 145px;
+		height:200px;
+		background-size: 145px 180px;
+		display: inline-block;
+		margin-right: 40px;
+		max-width: calc(20% - 40px);
+		position: relative;
+		top: -30px;
 	}
 }
- 
- 
+
+.actual-quote{
+	max-width: 80%;
+}
+
+.quoted-from{
+	float: right;
+	margin-top: -20px;
+	font-size: 14px;
+}
+
+.quote_name::before{
+	content: "- "
+}
+
+.quote_title, .quote_org{
+display: inline-block;
+}
+
+.client-image{
+	position: absolute;
+	display:inline-block;
+	border-radius: 50%;
+	position: absolute;
+	display: inline-block;
+	border-radius: 50%;
+	top: -10px;
+	right: calc(50% - 40px);
+	img{
+		border-radius: 50%;
+		border: 10px solid white;
+	}
+}
+
+.helped{
+	h1{
+		text-align: center;
+	}
+	.client-logo{
+		float: left;
+		width: 33.33%;
+	}
+} 
+  
+  
