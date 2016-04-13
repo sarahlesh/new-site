@@ -8,9 +8,9 @@ $(function(){
 		if(!$(".logobar").hasClass("dark")){
 			$('.logobar').toggleClass("dark");
 		}
-		$('.navigation').slideToggle(function(){
+		$('.navigation').slideToggle( function(){
 			$(this).toggleClass("none");
-		})
+		});
 	});
 
 	// change of .logobar color on scroll 
@@ -112,6 +112,20 @@ analogClock2.prototype.run = function() {
     jQuery('#hour-la').css("transform", "rotate(" + hour + "deg)");
     jQuery('#minute-la').css("transform", "rotate(" + minute + "deg)");
   };
+
+  // typing effect of adjective in header
+
+$("#typed").typed({
+			strings: ["happier", "healthier", "kinder", "better"],
+			typeSpeed: 100,
+			startDelay: 80,
+			backDelay: 1000,
+			loop: false,
+			showCursor: true,
+			callback: function(){
+				// $(".typed-cursor").addClass("none");
+			}
+		});
 
 
 

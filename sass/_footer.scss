@@ -22,6 +22,7 @@ footer {
 		border-top: 1px solid #505050;
 		border-bottom: 1px solid #505050;
 		padding:30px 0;
+		transition: all 0.5s;
 		.contact{
 			font-size: 44px;
 			font-family: $bask;
@@ -31,12 +32,47 @@ footer {
 			font-size: 30px;
 			color: white;
 		}
+
+		.signup{
+			color: $lightgrey;
+			font-size: 40px;
+			transition: all 0.5s;
+			font-family: $bask;
+		}
 	}
 }
 
-.foot-item.contact:hover, .foot-item.contact:focus {
+.footer .foot-item.contact:hover, .footer .foot-item.contact:focus {
 	background: $green;
 	.contact{
 		color: white;
+	}
+}
+
+.footer .foot-item.signup:hover > .signup,  .footer .foot-item.signup:focus > .signup {
+	color: $green;
+}
+ .footer .foot-item.signup:focus, .footer .foot-item.signup:hover{
+	color: $green;
+	background: white;
+}
+
+.foot-item.facebook:hover, .foot-item.facebook:focus{
+	background: #3a599a;
+}
+
+.foot-item.twitter:hover, .foot-item.twitter:focus{
+	background: #05bbed;
+}
+
+.foot-item.linkedin:hover, .foot-item.linkedin:focus{
+	background: #1285c4;
+}
+
+.footer .foot-item.copyright{
+	background: white;
+	color: #4e4e4e;
+	.hjc{
+		color:#4e4e4e;
 	}
 }

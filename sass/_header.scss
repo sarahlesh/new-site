@@ -7,13 +7,14 @@
 	color: white;
 	h1{
 		font-weight: 100;
+		font-size: 57px;
 
 	}
 	h2{
 		font-size: 30px;
 		font-weight: 100;
 		color: #959494;
-		padding: 60px 0 40px 0;
+		padding: 40px 0;
 	}
 	.button{
 		display: inline-block;
@@ -31,6 +32,10 @@
 		margin-left: 25px;
 	}
 } 
+
+.typed p{
+	display: inline;
+}
 
 .front-head-content{
 	padding: 200px 0 120px;
@@ -55,3 +60,25 @@
 .logobar.dark{
 	background: $darkgrey;
 }
+
+// .typed-cursor{
+//     opacity: 1;
+//     -webkit-animation: blink 0.7s infinite;
+//     -moz-animation: blink 0.7s infinite;
+//     animation: blink 0.7s infinite;
+// }
+// @keyframes blink{
+//     0% { opacity:1; }
+//     50% { opacity:0; }
+//     100% { opacity:1; }
+// }
+// @-webkit-keyframes blink{
+//     0% { opacity:1; }
+//     50% { opacity:0; }
+//     100% { opacity:1; }
+// }
+// @-moz-keyframes blink{
+//     0% { opacity:1; }
+//     50% { opacity:0; }
+//     100% { opacity:1; }
+// }

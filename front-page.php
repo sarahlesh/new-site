@@ -28,7 +28,11 @@
 	</div> -->
 	<div class="right">
 		<ul class="specialties">
-			
+			<li>We <span>Fundraise.</span></li>
+			<li>We <span>Tell your story.</span></li>
+			<li>We <span>take a holistic approach.</span></li>
+			<li>We <span>engage.</span></li>
+			<li>We <span>innovate.</span></li>
 		</ul>
 	</div>
 </section>

@@ -55,9 +55,13 @@
 		<a href="https://www.linkedin.com/company/hjc" target="_blank" class="fa fa-linkedin"></a>
 	</div>
 
-
+	<div class="foot-item copyright">
+		<p>Copyright <?php echo date("Y"); ?>. All rights reserved. All images and content property of <span class="hjc">hjc</span>.</p>
+	</div>
 	
 </section>
+
+
 
 </footer>
 <script src='http://code.jquery.com/jquery-latest.min.js'></script>

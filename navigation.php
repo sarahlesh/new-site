@@ -1,5 +1,5 @@
 <nav class="navigation none">
-	<div class="container">
+	<div class="container flipInX">
 		<?php wp_nav_menu( array(
 	      'container' => false,
 	      'theme_locations' => 'primary'
