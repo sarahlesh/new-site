@@ -32,8 +32,19 @@ body {
 .button{
 	border: 1px solid $green;
 	color: $green;
-	padding: 20px 0;
+	padding: 20px;
 	min-width: 250px;
+	display:inline-block;
+	text-align: center;
+	text-transform: uppercase;
+	&:hover{
+		background: $green;
+		color: white;
+	}
+	&:focus{
+		background: $green;
+		color: white;
+	}
 }
 
 .hjc{
@@ -63,3 +74,23 @@ body {
 .block{
 	display:block;
 }
+
+.square{
+		float:left;
+		width: 25%;
+		display: inline-block;
+		position: relative;
+}
+.square img{
+		display:block;
+}
+.main{
+	padding-top: 83px; //space for fixed header
+}
+
+.spacer{
+	display: block;
+    position: relative;
+    top: -140px;
+    visibility: hidden;
+} 

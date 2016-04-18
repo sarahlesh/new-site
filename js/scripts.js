@@ -30,11 +30,32 @@ $(function(){
 
 	// init flickity
 
-	$('.carousel').flickity({
+	var $carousel = $('.carousel').flickity({
 	  // options
-	  cellAlign: 'left',
-	  contain: true
+	  contain: true,
+	  prevNextButtons: false,
+	  pageDots:false,
+	  wrapAround: true
 	});
+
+
+	 var flkty = $carousel.data('flickity');
+	 // elements
+	 var $cellButtonGroup = $('.specialties');
+	 var $cellButtons = $cellButtonGroup.find('.nav-for');
+
+	 // update selected cellButtons
+	 $carousel.on( 'cellSelect', function() {
+	   $cellButtons.filter('.is-selected')
+	     .removeClass('is-selected');
+	   $cellButtons.eq( flkty.selectedIndex )
+	     .addClass('is-selected');
+	 });
+
+	 $cellButtonGroup.on( 'click', '.nav-for', function() {
+	   var index = $(this).index();
+	   $carousel.flickity( 'select', index );
+	 });
 
 	// randomly choose a quote to display on homepage
 

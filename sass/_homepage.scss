@@ -1,5 +1,6 @@
+// ==========Homepage styling =========
+
 .whoIs{
-	padding: 60px;
 	text-align: center; 
 	p{
 		padding: 40px 0;
@@ -8,19 +9,58 @@
 
 .weDo{
 	text-align: center;	
+	.button{
+		margin-top: 40px;
+	}
 }
 
-.case-studies{
-	.study{
-		float:left;
-		width: 25%;
-		display: inline-block;
-		position: relative;
+.weDo h1{
+	padding-bottom: 80px;
+}
+
+
+
+.specialties{
+	text-align: left;
+	li{
+		opacity: 0.4; 
+		font-weight: 100;
+		font-size: 34px;
+		cursor: pointer;
+		span{
+			font-weight: 600;
+		}
 	}
-	.study img{
-		display:block;
+	li.is-selected{
+		opacity: 1;
+		span{
+			color: $green;
+		}
 	}
 }
+
+.weDo .right{
+		text-align: left;
+	}
+
+.carousel{
+	display:inline-block;
+	width:300px;
+}
+
+	.carousel-cell{
+		width:100%;
+		height: 400px;
+		display: block;
+
+	}
+
+
+.carousel img{
+	display:block;
+	margin: 0 auto;
+}
+
 
 .study-content{
 	display:none;
@@ -61,7 +101,7 @@
 	text-transform: uppercase;
 }
 
-.study-content-title .fa{
+.study-content-title .fa, .arrow-direction.fa{
   	color: white;
     background: black;
     border-radius: 50%;
@@ -156,6 +196,44 @@ display: inline-block;
 		float: left;
 		width: 33.33%;
 	}
+}
+
+.team{
+	clear: both;
+	h1{
+		text-align: center;
+	}
+	.team-photo{
+		background: url(./images/background.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+
+	.meet{
+		color: white;
+		background: $green;
+		width: 35%;
+		padding: 80px 40px;
+		float: right;
+		.button{
+			background: $mediumgrey;
+			color: white;
+			border: 1px solid white;
+			margin-top: 40px;
+			font-size: 14px;
+		}
+		h2{
+			font-size: 24px;
+			margin-bottom: 35px;
+		}
+
+	}
 } 
-  
-  
+.team.section{
+	padding-bottom: 0;
+}
+
+.helped h1, .team h1{
+	margin-bottom: 40px;
+  }

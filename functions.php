@@ -303,3 +303,13 @@ function get_post_parent($post) {
 		return $post->ID;
 	}
 }
+
+
+// add image crop acf
+
+add_action('acf/register_fields', 'my_register_fields');
+
+function my_register_fields()
+{
+    include_once('../../plugins/acf-image-crop-add-on/acf-image-crop.php');
+}
