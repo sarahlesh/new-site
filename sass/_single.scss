@@ -1,3 +1,4 @@
+// single archive page
 .approach, .result, .quotes{
 	clear: both;
 	color: white;
@@ -45,7 +46,7 @@
 	}
 }
 
-.single{
+.single-casestudies{
 	.single-image{
 		display:block;
 	}
@@ -81,5 +82,72 @@
 	}
 	.approach-button{
 		margin: 15px 0;
+	}
+}
+
+// single team member page
+
+.social-bar{
+	text-align: left;
+	margin-top: 30px;
+	.social{
+		float: right; 
+		a.fa{
+			color: white;
+			background: #dadada; 
+			width:1.7em;
+			line-height: 1.7em;
+			text-align: center;
+			border-radius: 50%;
+			font-size: 26px;
+			display: inline-block;
+			margin-right: 15px;
+		}
+	}
+} 
+
+.single-team-member{
+	text-align: center;
+	h2{
+		text-transform: uppercase;
+		font-size: 20px;
+		font-weight: 600;
+	}
+	
+	.team-member-image{
+		img{
+			max-width:420px;
+			max-height:420px;
+			border-radius: 50%;
+			border: 3px solid $green;
+			margin: 40px 0; 
+		}
+	}
+	.history{
+		padding-bottom: 60px;
+	}
+}
+
+.interesting-things{
+	background: #f8f8f8;
+	border-top: 1px solid #b9b9b9;
+	padding: 40px 0;
+	.interesting{
+		float: left;
+		width: 33.33%;
+		padding: 0 100px;
+	}
+	.interesting:nth-of-type(2){
+		border-right: 1px solid #b9b9b9;
+		border-left: 1px solid #b9b9b9; 
+	}
+	i.fa{
+	color: $green;
+	font-size: 50px;
+	display:block;
+	margin-bottom: 20px;
+	}
+	h3, p{
+		font-size: 15px;
 	}
 }

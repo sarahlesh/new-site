@@ -8,7 +8,7 @@
            <img class="single-image" src="<?php echo $image['sizes']['background'] ?>" alt="<?php echo $alt ?>">
 
            <div class="container clearfix section top">
-             <a href="<?php bloginfo('url'); ?>/casestudies"><i class="fa fa-arrow-circle-left arrow-direction"></i></a>
+             <a href="<?php bloginfo('url'); ?>/casestudies"><i class="fa fa-arrow-left arrow-direction"></i></a>
              <h1><?php echo get_the_title() ?></h1>
 
              <div class="left">

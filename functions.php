@@ -17,6 +17,7 @@ function theme_setup() {
 	add_image_size('case-study', 500, 360, true);
 	add_image_size("client-quote", 80, 80, true );
 	add_image_size("client-logo", 300, 200, true );
+	add_image_size("team-member", 420, 420, true);
 
 
 	// Add default posts and comments RSS feed links to head

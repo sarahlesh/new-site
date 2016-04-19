@@ -146,7 +146,20 @@ $("#typed").typed({
 			callback: function(){
 				// $(".typed-cursor").addClass("none");
 			}
-		});
+});
+
+// hover animation on boxes
+
+$(".study").on("mouseover focus", function(){
+	$(this).find(".study-content-title").addClass("animated");
+})
+
+// services section
+
+$(".service-type").on('click', function(){
+ var search = $(this).data("search"); 
+$("*[data-id='"+search+"']").toggleClass("none");
+});
 
 
 

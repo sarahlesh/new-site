@@ -1,11 +1,10 @@
 <?php get_header(); ?>
 
-<div class="main case-studies-archive archive">
+<div class="main teammember-archive archive">
 
 	<div class="container archive-copy">
-		<h1>Case Studies</h1>
-		<p>What happens when you put us in a room with daring clients? Inspiring work we’re proud to share.</p>
-		<button class="green button contact-us">Dare to do incredible work today</button>
+		<h1>Meet the Team</h1>
+		<p>Single-origin coffee tattooed VHS swag irony. Etsy ennui aesthetic fingerstache slow-carb, pickled VHS fanny pack Truffaut chambray food truck brunch post-ironic dreamcatcher.</p>
 	</div>
 	<div class="boxes clearfix">
 
@@ -13,23 +12,22 @@
 
 	     <?php $projectQuery = new WP_Query( 
 	     			array( 
-	     				'post_type' => 'casestudies',   
+	     				'post_type' => 'team-member',   
 	     				) 
 	     		); ?>
 	     	<?php if ( $projectQuery->have_posts() ) : ?>
 
 	     		<?php while ($projectQuery->have_posts()) : $projectQuery->the_post(); ?>
-	     			<?php $image = get_field('image'); 
+	     			<?php $image = get_field('team_member_image'); 
 	     					$alt = $image['alt']; ?>
 	     			<a href="<?php echo get_post_permalink() ?>" class="study square">
 	     				<img src="<?php echo $image['sizes']['case-study'] ?>" alt="<?php echo $alt ?>">
 	     				<div class="study-content">
-	     					<div class="study-content-title  bounceInUp">
-	     							<div class="left">
-	     									<h3><?php the_field('client'); ?></h3>
-	     									<p><?php echo get_the_title() ?></p>
-	     							</div>
-	     							<i class="fa fa-arrow-right"></i>
+	     					<div class="study-content-title bounceInUp">
+	     									<h3><?php echo get_the_title() ?></h3>
+	     									<p><?php the_field("job_title") ?></p>
+	     							
+	     							<button class="button">Say Hi</button>
 	     					</div>
 	     				</div>
 	     			</a>

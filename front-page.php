@@ -62,12 +62,12 @@
 			<a href="#" class="study square">
 				<img src="<?php echo $image['sizes']['case-study'] ?>" alt="<?php echo $alt ?>">
 					<div class="study-content">
-						<div class="study-content-title">
+						<div class="study-content-title bounceInUp">
 								<div class="left">
 										<h3><?php the_sub_field('client_name'); ?></h3>
 										<p><?php the_sub_field('case_study_title'); ?></p>
 								</div>
-								<i class="fa fa-arrow-circle-right"></i>
+								<i class="fa fa-arrow-right"></i>
 						</div>
 					</div>
 			</a>
@@ -126,7 +126,7 @@
 			<div class="meet">
 				<h2>Meet the Team.</h2>
 				<p>together we'll do amazing thinfs for the world. It's only fair you get to know us.</p>
-				<a href="" class="button">see the whole crew</a>
+				<a href="<?php bloginfo('url') ?>/team-member" class="button">see the whole crew</a>
 			</div>
 		</div>
 		
