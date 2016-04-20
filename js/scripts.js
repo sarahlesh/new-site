@@ -154,11 +154,22 @@ $(".study").on("mouseover focus", function(){
 	$(this).find(".study-content-title").addClass("animated");
 })
 
-// services section
+// services section toggle
+
+$(".service-desc:first-of-type").removeClass("none");
+
+var id = $(".service-desc:first-of-type").data("id"); 
+
+$("*[data-search='"+id+"']").addClass("active");
 
 $(".service-type").on('click', function(){
  var search = $(this).data("search"); 
-$("*[data-id='"+search+"']").toggleClass("none");
+ $(".service-desc").css("display", "none");
+ $(".service-type").removeClass("active");
+$("*[data-id='"+search+"']").slideDown("slow", function(){
+	$(this).removeClass("none");
+});
+$("*[data-search='"+search+"']").addClass("active");
 });
 
 

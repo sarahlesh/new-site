@@ -314,3 +314,15 @@ function my_register_fields()
 {
     include_once('../../plugins/acf-image-crop-add-on/acf-image-crop.php');
 }
+
+// remove single.php from services CPT
+
+add_action( 'template_redirect', 'wpse_128636_redirect_post' );
+ 
+function wpse_128636_redirect_post() {
+  $queried_post_type = get_query_var('post_type');
+  if ( is_single() && 'services' ==  $queried_post_type ) {
+    wp_redirect( bloginfo("url").'/HJC/services/', 301 );
+    exit;
+  }
+}
