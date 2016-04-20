@@ -42,3 +42,37 @@
 	}
  }
 
+ .careers-archive{
+ 	h1{
+ 		margin-bottom: 40px;
+ 	}
+ 	p{
+ 		margin-bottom: 60px;
+ 	}
+
+ 	li{
+ 		display:block;
+ 		width: 100%;
+ 		border-top: 1px solid $bordergrey;
+ 		background: $extralightgrey;
+ 		transition: all 0.5s;
+ 		a{
+ 			display: block;
+ 			width: 100%;
+ 			padding: 40px 0;
+ 			color:black;
+ 			font-weight: 700;
+ 			font-size: 20px;
+ 		}
+ 	}
+ 	li:last-of-type{
+ 		border-bottom: 1px solid $bordergrey;
+ 	}
+ 	li:hover, li:focus{
+ 		background: $green;
+ 		a{
+ 			color: white;
+ 		}
+ 	}
+ }
+

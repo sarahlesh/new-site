@@ -11,6 +11,14 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
    <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700|Open+Sans:400,700,600,800' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+  <meta property="og:title" content="<?php  wp_title('|', true, 'right'); ?>" />
+  <meta property="og:site_name" content="<?php  wp_title('|', true, 'right'); ?>"/>
+  <meta property="og:url"
+  content="<?php bloginfo('url') ?>" />
+  <meta property="og:image" content="<?php bloginfo('template_directory'); ?>/images/logo.png" />
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:creator" content="@hjcnewmedia"> 
+  <meta name="twitter:title" content="<?php  wp_title('|', true, 'right'); ?>">
 
   <?php wp_head(); ?>
 </head>

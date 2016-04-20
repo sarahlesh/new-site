@@ -33,8 +33,7 @@
  
         <h1>We want to <span class="green">leave the world <span id="typed"></span></span><span class="block">than we found it</span></h1>
 
-        <?php $field = get_field("tagline", 5); ?>
-        <h2><?php echo $field ?></h2>
+        <h2>We can't do it without you</h2>
 
         <a class="button" href="">See our work</a>
         <a class="button project" href="">Let's start a project</a>
