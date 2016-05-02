@@ -18,8 +18,8 @@
 				   <div id="hour" class="clock-hour"></div>
 				   <div id="minute" class="clock-minute"></div>
 				 </div>
+				</div>
 				 <h2><span class="hjc">hjc</span> Toronto</h2>
-			</div>
 		</div>
 			
 		<div class="spain clock">
@@ -65,6 +65,8 @@
 
 </footer>
 <script src='http://code.jquery.com/jquery-latest.min.js'></script>
+<script src="https://cdn.jsdelivr.net/scrollreveal.js/3.1.4/scrollreveal.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
 <script src="wp-content/themes/hjc/node_modules/moment-timezone/moment-timezone.js"></script>
 

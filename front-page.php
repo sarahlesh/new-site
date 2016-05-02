@@ -4,15 +4,16 @@
 <?php get_header(); ?>
 
 <!-- Who is HJC section -->
-
-<section class="whoIs container section">
+<span id="about" class="anchor"></span>
+<section class="whoIs container section panel">
 	<h1>Who is <span class="green hjc">hjc?</span></h1>
 	<p>We’re a digital fundraising agency that has been serving nonprofits like yours for over two decades. From the largest charities in the world, to the “little guys” just around the corner – we’ve helped raise over a billion dollars for clients across the globe. </p>
 
 	<button class="green button">Tell us about your goals</button>
 </section>
 
-<section class="weDo container clearfix section">
+<span id="weDo" class="anchor"></span>
+<section class="weDo container clearfix section panel">
 	<h1>What do we do?</h1>
 	<div class="carousel">
 		<div class="carousel-cell">
@@ -53,7 +54,7 @@
 </section>
 
 <!-- Who is Case Study section -->
-<section class="case-studies">
+<section class="case-studies panel">
 	<div class="studies clearfix">
 	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 		<?php while( has_sub_field('case_studies') ): ?>
@@ -104,7 +105,7 @@
 
 <!-- Who we've helped -->
 
-<section class="helped container section">
+<section class="helped container section panel">
 	<h1>Who we've helped</h1>
 	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 		<?php while( has_sub_field('clients_helped') ): ?>
@@ -118,7 +119,7 @@
 	<?php wp_reset_query(); ?>
 </section>
 
-<section class="team section">
+<section class="team section panel">
 	<h1>Our Team</h1>
 
 	<div class="team-photo clearfix">

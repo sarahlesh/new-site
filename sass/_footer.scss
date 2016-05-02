@@ -23,13 +23,29 @@ footer {
 		border-bottom: 1px solid #505050;
 		padding:30px 0;
 		transition: all 0.5s;
+		z-index: 1;
+		position: relative;
+	&::after{
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		transform: scaleX(0);
+		transform-origin: 0 50%;
+		z-index: -1;
+		transition: transform 0.3s;
+	}
 		.contact{
 			font-size: 44px;
 			font-family: $bask;
 			color: $lightgrey;
 		}
 		.fa{
-			font-size: 30px;
+			font-size: 45px;
 			color: white;
 		}
 
@@ -42,32 +58,44 @@ footer {
 	}
 }
 
-.footer .foot-item.contact:hover, .footer .foot-item.contact:focus {
+.footer .foot-item:hover .contact{
+	color: white;
+}
+
+.footer .foot-item.contact::after{
 	background: $green;
-	.contact{
-		color: white;
-	}
 }
 
 .footer .foot-item.signup:hover > .signup,  .footer .foot-item.signup:focus > .signup {
 	color: $green;
 }
- .footer .foot-item.signup:focus, .footer .foot-item.signup:hover{
+
+ .footer .foot-item.signup::after{
 	color: $green;
 	background: white;
-}
+} 
 
-.foot-item.facebook:hover, .foot-item.facebook:focus{
+.foot-item.facebook::after{
 	background: #3a599a;
 }
 
-.foot-item.twitter:hover, .foot-item.twitter:focus{
+.foot-item.twitter::after{
 	background: #05bbed;
 }
 
-.foot-item.linkedin:hover, .foot-item.linkedin:focus{
+.foot-item.linkedin::after{
 	background: #1285c4;
 }
+
+.footer .foot-item:hover::after, &:focus::after{
+		transform: scaleY(1);
+	} 
+
+
+.footer .foot-item.signup:hover > .signup,  .footer .foot-item.signup:focus > .signup {
+	color: $green;
+}
+
 
 .footer .foot-item.copyright{
 	background: white;

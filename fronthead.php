@@ -24,13 +24,6 @@
   <div class="container front-head-content">
     <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-        <!-- <div id="typed-strings">
-          <p>happier</p>
-          </span><p>kinder</p>
-          <p>healthier</p>
-          <p>better</p>
-        </div> -->
- 
         <h1>We want to <span class="green">leave the world <span id="typed"></span></span><span class="block">than we found it</span></h1>
 
         <h2>We can't do it without you</h2>

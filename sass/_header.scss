@@ -24,9 +24,6 @@
 		color: white;
 		text-transform: uppercase;
 		font-size: 14px;
-		&:hover{
-			background: $green;
-		}
 	}
 	.project{
 		margin-left: 25px;
@@ -47,6 +44,7 @@
 	position: fixed;
 	width: 100%;
 	z-index: 100;
+	transition: all 0.3s;
 }
 
 .middle{

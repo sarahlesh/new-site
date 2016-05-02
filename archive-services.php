@@ -44,7 +44,7 @@
 
 		<?php while ($servicesQuery->have_posts()) : $servicesQuery->the_post(); ?>
 		<?php $title = get_the_title(); ?>
-			<div data-id="<?php the_field("services_slug"); ?>" class="desciption service-desc none">
+			<div data-id="<?php the_field("services_slug"); ?>" class="desciption service-desc none bounceInUp">
 				<h3><?php echo $title ?></h3>
 				<p><?php the_field('service_description') ?></p>
 				<?php if( have_rows('benefits') ):?>

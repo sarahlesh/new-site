@@ -1,0 +1,168 @@
+@media (max-width:1330px){
+	.study-content-title .fa, .arrow-direction.fa, .benefit:before{
+		margin-right: 5px;
+	}
+	.study-content-title h3{
+		font-size: 20px;
+	}
+}
+
+@media (max-width:1100px){
+	.container{
+		max-width:95%;
+	}
+	.front-head h1{
+		font-weight: 47px;
+	}
+	.front-head .button{
+		padding: 25px 0;
+	}
+
+	.study-content{
+		display: flex;
+		display: -webkit-flex;
+		padding: 10px;
+	}
+	.study-content-title{
+		bottom: 0;
+		right: 0;
+	}
+	.study-content-title .fa, .study-content .arrow-direction.fa, .study-content .benefit:before{
+		float: right;
+	}
+
+	.study-content .left{
+		display:block;
+		float:none;
+	}
+	.quoted-from{
+		margin-right: 2.5%;
+		margin-top: 0;
+	}
+	.interesting-things .interesting{
+		padding: 0 55px;
+	}
+}
+
+@media (max-width:935px){
+	.square{
+		width: 50%;
+	}
+	.study-content-title h3{
+		font-size: 30px;
+	}
+	.quotes blockquote{
+		font-size: 27px;
+	}
+
+	.quotes blockquote::before{
+		width: 95px;
+		height: 150px;
+		background-size: 95px 150px;
+	}
+
+	.button{
+		min-width: auto;
+	}
+
+	.clocks.container{
+		max-width: 95%;
+		text-align: center;
+	}
+
+	.clock{
+		float: none;
+		display: inline-block;
+	}
+
+	.clock:nth-of-type(2){
+		margin: 0 100px;
+	}
+
+	.clock-circle {
+	    width: 155px;
+	    height: 155px;
+	}
+
+}
+
+@media (max-width:835px){
+	.footer .foot-item .signup{
+		font-size: 30px;
+	}
+
+	.footer .foot-item .contact{
+		font-size: 35px;
+	}
+}
+
+
+
+@media (max-width:800px){
+	.team .meet{
+		width: 55%;
+	}
+
+	.clock:nth-of-type(2){
+		margin: 0 50px;
+	}
+
+	.interesting-things .interesting{
+		padding: 0 30px;
+	}
+}
+
+@media (max-width:700px){
+	h1{
+		font-size: 50px;
+	}
+	.middle{
+		display: none;
+	}
+}
+
+@media (max-width:625px){
+	.clock:nth-of-type(2){
+		margin: 20px 0;
+	}
+
+	.clock{
+			width: 100%;
+		}
+	.clock:nth-of-type(2){
+		margin: 20px 0;
+	}
+
+	.single-team-member .team-member-image img{
+		max-width: 330px;
+	}
+
+	.footer .foot-item .signup{
+		font-size: 23px;
+	}
+	.footer .foot-item .contact{
+		font-size: 30px;
+	}
+	.study-content-title h3{
+		font-size: 20px;
+	}
+}
+@media (max-width:500px){
+	.clock{
+		width: 100%;
+	}
+	.clock:nth-of-type(2){
+		margin: 60px 0;
+	}
+	.interesting-things .interesting{
+		width: 100%;
+	}
+	.interesting-things .interesting:nth-of-type(2){
+		border-right:0;
+		border-left: 0;
+		border-top: 1px solid #b9b9b9;
+		border-bottom: 1px solid #b9b9b9;
+		padding: 40px 0;
+		margin: 40px 0;
+	}
+}

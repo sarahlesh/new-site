@@ -94,7 +94,7 @@
 		float: right; 
 		a.fa{
 			color: white;
-			background: $lightgrey; 
+			background: #dadada; 
 			width:1.7em;
 			line-height: 1.7em;
 			text-align: center;
@@ -150,4 +150,23 @@
 	h3, p{
 		font-size: 15px;
 	}
+}
+
+.single-careers{
+	h1{
+		text-align: center; 
+		margin-bottom: 40px;
+	}
+	.position-deets{
+		text-transform: uppercase;
+	}
+	.apply-button{
+		text-align: center;
+		margin-bottom: 40px;
+	}
+
+	.job-info{
+		margin-bottom: 40px;
+	}
+
 }

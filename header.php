@@ -26,7 +26,7 @@
 
 <body <?php body_class(); ?>>
 
-<header class="full">
+<header class="full clearfix">
 <a href="#maincontent" id="skip-link" class="screen-reader-text" >Skip to main content</a>
 
 
