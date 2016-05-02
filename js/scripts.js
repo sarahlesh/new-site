@@ -1,5 +1,5 @@
-
 $(function(){
+
 
 
 // animate the exit 
@@ -8,12 +8,29 @@ $(function(){
 		if(!$(".logobar").hasClass("dark")){
 			$('.logobar').toggleClass("dark");
 		}
-		$('.navigation').slideToggle( function(){
-			$(this).toggleClass("none");
-		});
+		close()
 	});
 
+	$("#menu-item-52").on('click touchstart',function(){
+		close();
+		$("#nav-icon3").toggleClass('open');
+	});
+
+	$("#menu-item-171").on('click touchstart',function(){
+		close();
+		$("#nav-icon3").toggleClass('open');
+	});
+
+	var close = function(){
+		$('.navigation').slideToggle( function(){
+			$(this).addClass("none");
+		});
+	}
+
+
+
 	// change of .logobar color on scroll 
+
 
 	if($("body").hasClass("home")){
 		$(window).scroll(function(){
@@ -21,7 +38,11 @@ $(function(){
 
 		     if(testScroll > $(".logobar").height()){
 		       $(".logobar").addClass("dark"); 
-		     } else{
+		     }
+		     else if($('#nav-icon3').hasClass('open')){
+		     $(".logobar").addClass("dark"); 	
+		     }
+		     else{
 		       $(".logobar").removeClass("dark");
 		     }
 
@@ -162,16 +183,31 @@ var id = $(".service-desc:first-of-type").data("id");
 
 $("*[data-search='"+id+"']").addClass("active");
 
-$(".service-type").on('click', function(){
- var search = $(this).data("search"); 
- $(".service-desc").css("display", "none");
- $(".service-type").removeClass("active");
-$("*[data-id='"+search+"']").slideDown("slow", function(){
-	$(this).removeClass("none");
-});
-$("*[data-search='"+search+"']").addClass("active");
-});
+	$(".service-type").on('click', function(){
+	 var search = $(this).data("search"); 
+	 $(".service-desc").css("display", "none");
+	 $(".service-type").removeClass("active");
+	$("*[data-id='"+search+"']").css("display","block").addClass("animated");
+	$("*[data-search='"+search+"']").addClass("active");
+	});
 
+// reveal on scroll
+
+window.sr = ScrollReveal({});
+sr.reveal('.whoIs');
+sr.reveal('.weDo');
+sr.reveal('.case-studies');
+sr.reveal(".helped");
+sr.reveal(".team"); 
+sr.reveal('.square', {
+	duration: 1000},
+	50);
+sr.reveal('.client-logo', {
+	duration: 1000},
+	50);
+
+srr.reveal('.benefit', {
+	duration: 1000},50);
 
 
 });
