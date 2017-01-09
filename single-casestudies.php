@@ -27,12 +27,15 @@
               </div>
               </div>
 
-              <div class="right">
-                <a href="<?php the_field('link_to_project') ?>" target="_blank" class="green button">See the project</a>
-                <a href="#approach" class="green button approach-button">Our Approach</a>
-                <button class="green button contact-us">Let's Start a project</button>
+              <div class="right case-buttons">
+                <a href="<?php the_field('link_to_project') ?>" target="_blank" class="green button case-button">See the project</a>
+                <?php if( get_field('our_approach') ): ?>
+                  <a href="#approach" class="green button approach-button case-button">Our Approach</a>
+                <?php endif; ?>
+                <button class="green button contact-us case-button">Let's Start a project</button>
               </div>
            </div>
+           <?php if( get_field('our_approach') ): ?>
             <span id="approach" class="spacer" ></span>
            <section class="approach section">
              <div class="container clearfix">
@@ -49,21 +52,25 @@
                 </div>
              </div>
            </section>
+            <?php endif; ?>
+            <?php if( get_field('the_result') ): ?>
             <span id="result" class="spacer"></span>
-           <section class="result section">
-             <div class="container clearfix">
-        
-                <h2>The Result</h2>
+             <section class="result section">
+               <div class="container clearfix">
+          
+                  <h2>The Result</h2>
 
-               <div class="left">
-                 <p><?php the_field("the_result") ?></p>
+                 <div class="left">
+                   <p><?php the_field("the_result") ?></p>
+                 </div>
+                <?php if( get_field('result_highlight') ): ?>
+                   <div class="right result-highlight">
+                     <?php the_field("result_highlight") ?>
+                   </div>
+                <?php endif; ?>
                </div>
-
-               <div class="right result-highlight">
-                 <?php the_field("result_highlight") ?>
-               </div>
-             </div>
-           </section>
+             </section>
+           <?php endif; ?>
           
           <section class="quotes">
            <?php require('quote.php') ?>

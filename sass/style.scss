@@ -1,10 +1,10 @@
 @charset "UTF-8";
 /*
-* Theme Name: St. Joe's Hospital Foundation
+* Theme Name: HJC
 * Theme URI: 
-* Description: Customized theme for St. Joe's Hospital Foundation
+* Description: Customized theme for HJC
 * Version: 1.0
-* Author: Hewitt Johnson Consultants - Sarah Lesh
+* Author: HJC - Sarah Lesh
 * Author URI:
 */
 @import "flickity";
@@ -17,8 +17,11 @@
 @import "navigation"; 
 @import "header";
 @import "homepage";
+@import "storytelling";
 @import "archive";
 @import "single";
 @import "services";
 @import "clock";
 @import "footer";
+@import "responsive";
+

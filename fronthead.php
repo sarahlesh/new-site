@@ -36,7 +36,7 @@
         <h2>We can't do it without you</h2>
 
         <a class="button" href="">See our work</a>
-        <a class="button project" href="">Let's start a project</a>
+        <a class="button project contact-button" href="#">Let's start a project</a>
 
  
       <?php endwhile; // end the loop?>

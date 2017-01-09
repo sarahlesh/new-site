@@ -1,5 +1,7 @@
 footer {
 	clear: both;
+	z-index: 10;
+	position: relative;
 }
 
 .clocks-container{
@@ -9,7 +11,7 @@ footer {
 .clock h2{
 	color: $lightgrey;
 	margin-top: 30px;
-	font-size: 20px;
+	font-size: 200%;
 	text-transform: uppercase;
 	font-weight: 600;
 }
@@ -24,7 +26,7 @@ footer {
 		padding:30px 0;
 		transition: all 0.5s;
 		.contact{
-			font-size: 44px;
+			font-size: 440%;
 			font-family: $bask;
 			color: $lightgrey;
 		}
@@ -35,44 +37,43 @@ footer {
 
 		.signup{
 			color: $lightgrey;
-			font-size: 40px;
+			font-size: 400%;
 			transition: all 0.5s;
 			font-family: $bask;
 		}
 	}
-}
+} 
 
 .footer .foot-item.contact:hover, .footer .foot-item.contact:focus {
 	background: $green;
 	.contact{
 		color: white;
 	}
-}
+} 
 
 .footer .foot-item.signup:hover > .signup,  .footer .foot-item.signup:focus > .signup {
 	color: $green;
 }
- .footer .foot-item.signup:focus, .footer .foot-item.signup:hover{
+.social-links a.fa:hover{
 	color: $green;
-	background: white;
 }
 
-.foot-item.facebook:hover, .foot-item.facebook:focus{
-	background: #3a599a;
-}
-
-.foot-item.twitter:hover, .foot-item.twitter:focus{
-	background: #05bbed;
-}
-
-.foot-item.linkedin:hover, .foot-item.linkedin:focus{
-	background: #1285c4;
-}
-
+.social-links{
+	a{
+		display: inline-block;
+		margin: 0 30px;
+	}
+} 
 .footer .foot-item.copyright{
 	background: white;
 	color: #4e4e4e;
 	.hjc{
 		color:#4e4e4e;
 	}
+} 
+ .footer .foot-item.signup:focus, .footer .foot-item.signup:hover{
+	color: $green;
+	background: white;
 }
+
+ 

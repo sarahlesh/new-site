@@ -9,7 +9,7 @@
 	<h1>Who is <span class="green hjc">hjc?</span></h1>
 	<p>We’re a digital fundraising agency that has been serving nonprofits like yours for over two decades. From the largest charities in the world, to the “little guys” just around the corner – we’ve helped raise over a billion dollars for clients across the globe. </p>
 
-	<button class="green button">Tell us about your goals</button>
+	<button class="green button contact-button">Tell us about your goals</button>
 </section>
 
 <section class="weDo container clearfix section">
@@ -106,6 +106,7 @@
 
 <section class="helped container section">
 	<h1>Who we've helped</h1>
+	<div class="clients flexed">
 	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 		<?php while( has_sub_field('clients_helped') ): ?>
 			<?php $logo = get_sub_field('logo');
@@ -116,21 +117,28 @@
 		<?php endwhile; // end the loop?>
 	<?php endwhile; // end the loop?>
 	<?php wp_reset_query(); ?>
+	</div>
 </section>
 
-<section class="team section">
-	<h1>Our Team</h1>
+<section class="home-blog section">
+	<h1>Blog</h1>
+	      <?php query_posts('posts_per_page=2'); ?>
+	        <?php if (have_posts()) : while (have_posts()) :
+	            the_post(); ?>
+							<?php $post_id = null; // current post ?>
+	                            <h2><?php the_title();?></h2>
+	                                <div class="has_image clearfix">
+	                                        <a href="<?php the_permalink(); ?>" class="">
+	                                           go to blog
+	                                        </a>
+	                                            <?php the_excerpt(); ?>
+	                                </div>
+	    <?php endwhile;
+	    endif; ?>
 
-	<div class="team-photo clearfix">
-		<div class="container">
-			<div class="meet">
-				<h2>Meet the Team.</h2>
-				<p>together we'll do amazing thinfs for the world. It's only fair you get to know us.</p>
-				<a href="<?php bloginfo('url') ?>/team-member" class="button">see the whole crew</a>
-			</div>
-		</div>
-		
-	</div>
+	    <?php wp_reset_query(); ?>
+
+	
 
 </section>
 

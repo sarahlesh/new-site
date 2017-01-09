@@ -136,41 +136,147 @@ analogClock2.prototype.run = function() {
 
   // typing effect of adjective in header
 
-$("#typed").typed({
-			strings: ["happier", "healthier", "kinder", "better"],
-			typeSpeed: 100,
-			startDelay: 80,
-			backDelay: 1000,
-			loop: false,
-			showCursor: true,
-			callback: function(){
-				// $(".typed-cursor").addClass("none");
-			}
-});
+	$("#typed").typed({
+				strings: ["happier", "healthier", "kinder", "better"],
+				typeSpeed: 100,
+				startDelay: 80,
+				backDelay: 1000,
+				loop: false,
+				showCursor: true,
+				callback: function(){
+					// $(".typed-cursor").addClass("none");
+				}
+	});
 
 // hover animation on boxes
 
-$(".study").on("mouseover focus", function(){
-	$(this).find(".study-content-title").addClass("animated");
-})
+	$(".study").on("mouseover focus", function(){
+		$(this).find(".study-content-title").addClass("animated");
+	})
 
-// services section toggle
+	// services section toggle on large screen
 
-$(".service-desc:first-of-type").removeClass("none");
+	$(".service-desc:first-of-type").removeClass("none");
 
-var id = $(".service-desc:first-of-type").data("id"); 
+	var id = $(".service-desc:first-of-type").data("id"); 
 
-$("*[data-search='"+id+"']").addClass("active");
+	$("*[data-search='"+id+"']").addClass("active");
 
-$(".service-type").on('click', function(){
- var search = $(this).data("search"); 
- $(".service-desc").css("display", "none");
- $(".service-type").removeClass("active");
-$("*[data-id='"+search+"']").slideDown("slow", function(){
-	$(this).removeClass("none");
+	$(".service-type").on('click', function(){
+		 var search = $(this).data("search"); 
+		 $(".service-desc").css("display", "none");
+		 $(".service-type").removeClass("active");
+		$("*[data-id='"+search+"']").fadeIn("fast", function(){
+			$(this).removeClass("none");
+		});
+		$("*[data-search='"+search+"']").addClass("active");
+	});
+
+// services section toggle on small screen
+$(".services-archive .mobile-only").change(function(){
+	$('html, body').animate({
+	                   scrollTop: $("#desc").offset().top
+	               }, 500);
+	var search = $(".mobile-only option:selected").data("search"); 
+	$(".service-desc").css("display", "none");
+	$(".service-type").removeClass("active");
+	$("*[data-id='"+search+"']").fadeIn("fast", function(){
+		$(this).removeClass("none");
+	});
+	$("*[data-search='"+search+"']").addClass("active");
+
 });
-$("*[data-search='"+search+"']").addClass("active");
-});
+
+// scroll magic for story telling page
+	// var controller = new ScrollMagic.Controller({
+	// 		globalSceneOptions: {
+	// 			triggerHook: 'onLeave'
+	// 		}
+	// 	});
+
+	// var slides = document.querySelectorAll(".storytelling-item-container");
+
+	// 	// create scene for every slide
+	// 	for (var i=0; i<slides.length; i++) {
+	// 		new ScrollMagic.Scene({
+	// 				triggerElement: slides[i]
+	// 			})
+	// 			.setPin(slides[i])
+	// 			.addTo(controller);
+	// 	}
+	// scroll in things when scolling
+
+	 // slide things in when scroll
+
+		  $.fn.visible = function(partial) {
+
+	      var $t            = $(this),
+	          $w            = $(window),
+	          viewTop       = $w.scrollTop(),
+	          viewBottom    = viewTop + $w.height(),
+	          _top          = $t.offset().top,
+	          _bottom       = _top + $t.height(),
+	          compareTop    = partial === true ? _bottom : _top,
+	          compareBottom = partial === true ? _top : _bottom;
+
+	    return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+
+	  };
+
+	  function scrollIn(div) {
+	  	$(div).each(function(i, el) {
+	      var el = $(el);
+	      if (el.visible(true)) {
+	        el.addClass("come-in");
+	      }
+	    });
+	  }
+
+	  function scrollIn(div) {
+	  	$(div).each(function(i, el) {
+	      var el = $(el);
+	      if (el.visible(true)) {
+	        el.addClass("come-in");
+	      }
+	    });
+	  }
+
+	  function zoomIn(div){
+	  	$(div).each(function(i, el){
+	  		var el = $(el);
+	  		 if (el.visible(true)) {
+	        el.addClass("zoomIn animated");
+	      }
+	  	})
+	  }
+
+	  $(window).scroll(function(event) {
+	    zoomIn(".storytelling-item");
+	    zoomIn(".story-why-item");
+
+	  });
+
+	  var win = $(window);
+	var allMods = $(".module");
+
+	// Already visible modules
+	allMods.each(function(i, el) {
+	  var el = $(el);
+	  if (el.visible(true)) {
+	    el.addClass("already-visible");
+	  }
+	});
+
+	win.scroll(function(event) {
+
+	  allMods.each(function(i, el) {
+	    var el = $(el);
+	    if (el.visible(true)) {
+	      el.addClass("come-in");
+	    }
+	  });
+
+	});
 
 
 

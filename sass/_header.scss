@@ -7,11 +7,11 @@
 	color: white;
 	h1{
 		font-weight: 100;
-		font-size: 57px;
+		font-size: 570%;
 
 	}
 	h2{
-		font-size: 30px;
+		font-size: 300%;
 		font-weight: 100;
 		color: #959494;
 		padding: 40px 0;
@@ -23,7 +23,7 @@
 		border: 1px solid white;
 		color: white;
 		text-transform: uppercase;
-		font-size: 14px;
+		font-size: 140%;
 		&:hover{
 			background: $green;
 		}
@@ -59,6 +59,12 @@
 
 .logobar.dark{
 	background: $darkgrey;
+}
+
+.top-section{
+	   border-bottom: 1px solid #d6d6d6;
+	   text-align: center;
+	   padding-bottom: 60px;
 }
 
 // .typed-cursor{

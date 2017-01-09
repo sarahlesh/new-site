@@ -29,7 +29,7 @@
 <header class="full">
 <a href="#maincontent" id="skip-link" class="screen-reader-text" >Skip to main content</a>
 
-
+<?php require('contact-form.php') ?>
 <?php if( is_front_page() ) { require('fronthead.php'); }?>
 
 <?php if( !is_front_page() ) { require('not-front-head.php'); }?>

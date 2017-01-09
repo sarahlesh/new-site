@@ -61,6 +61,14 @@ function hjc_scripts() {
   );
 
   wp_enqueue_script(
+  	'scrollMagic',
+  	"http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js",
+  	false, //dependencies
+  	null, //version number
+  	true //load in footer
+  );
+
+  wp_enqueue_script(
     'plugins', //handle
     get_template_directory_uri() . '/js/plugins.js', //source
     false, //dependencies
@@ -103,7 +111,7 @@ function hjc_scripts() {
   wp_enqueue_script(
     'scripts', //handle
     get_template_directory_uri() . '/js/scripts.js', //source
-    array( 'jquery', 'plugins', 'moment', 'typewriter', 'moment-timezone' ), //dependencies
+    array( 'jquery', 'scrollMagic', 'plugins', 'moment', 'typewriter', 'moment-timezone' ), //dependencies
     null, // version number
     true //load in footer
   );

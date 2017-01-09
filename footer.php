@@ -2,34 +2,38 @@
 <section class="clocks-container section">
 
 	<div class="clocks container clearfix">
-		<div class="LA clock">
-			<div class="clock-circle">
-			  <div class="clock-face">
-			  	 <div id="hour-la" class="clock-hour"></div>
-			  	 <div id="minute-la" class="clock-minute"></div>
-			  </div>
+		<div class="clock-contain">
+			<div class="LA clock">
+				<div class="clock-circle">
+				  <div class="clock-face">
+				  	 <div id="hour-la" class="clock-hour"></div>
+				  	 <div id="minute-la" class="clock-minute"></div>
+				  </div>
+				</div>
+				<h2><span class="hjc">hjc</span> Los Angeles</h2>
 			</div>
-			<h2><span class="hjc">hjc</span> Los Angeles</h2>
 		</div>
-
-		<div class="toronto clock">
-			<div class="clock-circle toronto">
-				<div class="clock-face">
-				   <div id="hour" class="clock-hour"></div>
-				   <div id="minute" class="clock-minute"></div>
-				 </div>
+		<div class="clock-contain">
+			<div class="toronto clock">
+				<div class="clock-circle toronto">
+					<div class="clock-face">
+					   <div id="hour" class="clock-hour"></div>
+					   <div id="minute" class="clock-minute"></div>
+					 </div>
+				</div>
 				 <h2><span class="hjc">hjc</span> Toronto</h2>
 			</div>
 		</div>
-			
-		<div class="spain clock">
-			<div class="clock-circle spain">
-				 <div class="clock-face">
-				   	<div id="hour-spain" class="clock-hour"></div>
-				   	<div id="minute-spain" class="clock-minute"></div>
+		<div class="clock-contain">
+			<div class="spain clock">
+				<div class="clock-circle spain">
+					 <div class="clock-face">
+					   	<div id="hour-spain" class="clock-hour"></div>
+					   	<div id="minute-spain" class="clock-minute"></div>
+					</div>
 				</div>
+				<h2><span class="hjc">hjc</span> Spain</h2>
 			</div>
-			<h2><span class="hjc">hjc</span> Spain</h2>
 		</div>
 	</div>
 </section>
@@ -43,20 +47,17 @@
 	<div class="foot-item signup">
 		<button class="signup">Sign up for our monthly enewsletter</button>
 	</div>
-	<div class="foot-item facebook">
+	<div class="foot-item social-links">
 		<a href="https://www.facebook.com/hjcnewmedia" target="_blank" class="fa fa-facebook"></a>
-	</div>
 
-	<div class="foot-item twitter">
 		<a href="https://twitter.com/hjcnewmedia" target="_blank" class="fa fa-twitter"></a>
-	</div>
 
-	<div class="foot-item linkedin">
 		<a href="https://www.linkedin.com/company/hjc" target="_blank" class="fa fa-linkedin"></a>
 	</div>
 
 	<div class="foot-item copyright">
 		<p>Copyright <?php echo date("Y"); ?>. All rights reserved. All images and content property of <span class="hjc">hjc</span>.</p>
+		<p><a href="mailto:<?php the_field('footer_contact_email'); ?>"><?php the_field('footer_contact_email'); ?></a></p>
 	</div>
 	
 </section>
@@ -64,9 +65,6 @@
 
 
 </footer>
-<script src='http://code.jquery.com/jquery-latest.min.js'></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
-<script src="wp-content/themes/hjc/node_modules/moment-timezone/moment-timezone.js"></script>
 
 
 <script>

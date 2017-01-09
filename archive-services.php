@@ -25,14 +25,27 @@
 						 ?>
 
 						 <li class="service-type" data-search="<?php the_field("services_slug"); ?>"><?php echo $title ?></li>
-								
+				
 					<?php endwhile; ?>
 				<?php endif; ?>
 						
 			<?php wp_reset_postdata(); ?>
 			</ul>
 		</div>
-		<div class="right">	
+
+		<select class="mobile-only" name="" id="">
+		<?php if ( $servicesQuery->have_posts() ) : ?>
+
+			<?php while ($servicesQuery->have_posts()) : $servicesQuery->the_post(); ?>
+				<?php $title = get_the_title();
+				 ?>
+
+				 <option class="service-type" data-search="<?php the_field("services_slug"); ?>" value="<?php the_field("services_slug"); ?>"><?php echo $title ?></option>
+		
+			<?php endwhile; ?>
+		<?php endif; ?>
+		</select>
+		<div class="right" id="desc">	
 	 	<?php if ( have_posts() ) the_post(); ?>
 
 		<?php $servicesQuery = new WP_Query( 

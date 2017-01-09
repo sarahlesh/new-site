@@ -25,7 +25,7 @@
 	li{
 		opacity: 0.4; 
 		font-weight: 100;
-		font-size: 34px;
+		font-size: 340%;
 		cursor: pointer;
 		span{
 			font-weight: 600;
@@ -72,6 +72,7 @@
 	right:0;
 	left:0; 
 	padding: 30px;
+	transition: all 0.3s;
 	background-color: rgba(0,0,0,0.4);
     -webkit-flex-direction: row;
     flex-direction: row;
@@ -83,9 +84,20 @@
 
 .study-content-title {
 		color: white;
-		position: relative;	
-		bottom: 10px;
-		right: 10px;
+		display: -webkit-flex;
+		display: flex;
+		flex-direction: column;
+		-webkit-justify-content: center;
+		justify-content: center;
+		align-items: center;
+		.left{
+			margin-right: 1em;
+		}
+}
+
+.home .study-content-title, .post-type-archive .study-content-title{
+	-webkit-flex-direction: row;
+	flex-direction: row;
 }
 
 .study-content-title p, .study-content-title h3{
@@ -93,7 +105,7 @@
 }
 
 .study-content-title h3{
-	font-size: 	24px;
+	font-size: 	240%;
 }
 
 
@@ -105,7 +117,7 @@
   	color: black;
     background: white;
     text-align: center;
-    font-size: 25px;
+    font-size: 250%;
     line-height: 1.7em;
     width: 2em;
     border-radius: 50%;
@@ -124,7 +136,7 @@
 	padding: 40px 0;
 	blockquote{
 		background: none;
-		font-size: 	35px;
+		font-size: 	350%;
 		font-weight: 100;
 		text-align: left;
 		display: -webkit-flex;
@@ -143,6 +155,7 @@
 		content: "";
 		color:  #adbd4a;
 		background-image: url('sass/quotes.svg');
+		background-repeat: no-repeat;
 		width: 145px;
 		height:200px;
 		background-size: 145px 180px;
@@ -160,12 +173,12 @@
 
 .quoted-from{
 	float: right;
-	margin-top: -20px;
-	font-size: 14px;
+	// margin-top: -20px;
+	font-size: 140%;
 }
 
 .quote_name::before{
-	content: "- "
+	content: "- ";
 }
 
 .quote_title, .quote_org{
@@ -191,44 +204,20 @@ display: inline-block;
 	h1{
 		text-align: center;
 	}
+	
+	.clients{
+		justify-content: center;
+		align-items: center;
+	}
 	.client-logo{
-		float: left;
-		width: 33.33%;
+		margin: 30px 0;
+		text-align: center;
+		img{
+			max-width: 100%;
+		}
 	}
 }
 
-.team{
-	clear: both;
-	h1{
-		text-align: center;
-	}
-	.team-photo{
-		background: url(./images/background.jpg);
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
-	}
-
-	.meet{
-		color: white;
-		background: $green;
-		width: 35%;
-		padding: 80px 40px;
-		float: right;
-		.button{
-			background: $mediumgrey;
-			color: white;
-			border: 1px solid white;
-			margin-top: 40px;
-			font-size: 14px;
-		}
-		h2{
-			font-size: 24px;
-			margin-bottom: 35px;
-		}
-
-	}
-} 
 .team.section{
 	padding-bottom: 0;
 }
@@ -236,3 +225,4 @@ display: inline-block;
 .helped h1, .team h1{
 	margin-bottom: 40px;
   }
+ 
