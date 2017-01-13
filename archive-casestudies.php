@@ -5,7 +5,7 @@
 	<div class="container archive-copy">
 		<h1>Case Studies</h1>
 		<p>What happens when you put us in a room with daring clients? Inspiring work we’re proud to share.</p>
-		<button class="green button contact-us">Dare to do incredible work today</button>
+		<button class="green button contact-button">Dare to do incredible work today</button>
 	</div>
 	<div class="boxes clearfix">
 

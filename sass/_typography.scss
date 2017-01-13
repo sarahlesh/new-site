@@ -80,9 +80,9 @@ Global Classes / Wordpress Specific
 
 .alignright {
 	float: right;
-}
+}  
 
-img {
+img { 
 	&.alignleft {
 		padding-right: 5px;
 	}
@@ -97,19 +97,33 @@ img {
 	clear: both;
 }
 
+html{
+	font-size: 10px;
+}
+
 body{
 	font-family: $open;
 	line-height: 1.5;
+	font-size: 1.6rem;
 }
 p{
 	line-height: 1.5;
-	font-size: 16px;
+	font-size: 1.6rem;
 }
 
 h1, h3{
 	font-family: $bask;
 }
+h2{
+	font-size: 4rem;
+	text-transform: uppercase;
+}
+
+h3{
+	font-size: 3.5rem;
+}
 
 h1{ 
-	font-size: 640%;
+	font-size: 6.4rem;
 } 
+

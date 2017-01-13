@@ -20,17 +20,17 @@
 	     		<?php while ($projectQuery->have_posts()) : $projectQuery->the_post(); ?>
 	     			<?php $image = get_field('team_member_image'); 
 	     					$alt = $image['alt']; ?>
-	     			<a href="<?php echo get_post_permalink() ?>" class="study square">
+	     			<div href="<?php echo get_post_permalink() ?>" class="study square">
 	     				<img src="<?php echo $image['sizes']['case-study'] ?>" alt="<?php echo $alt ?>">
 	     				<div class="study-content">
 	     					<div class="study-content-title bounceInUp">
 	     									<h3><?php echo get_the_title() ?></h3>
 	     									<p><?php the_field("job_title") ?></p>
 	     							
-	     							<button class="button">Say Hi</button>
+	     							<a href="mailto:<?php the_field('team_member_email')?>"class="button">Say Hi</a>
 	     					</div>
 	     				</div>
-	     			</a>
+	     			</div>
 	     		<?php endwhile; ?>
 	     	<?php endif; ?>
 	     		

@@ -5,7 +5,7 @@
 		width: calc(40% - 85px);
 		margin-right: 85px;
 		text-align: left;
-		font-size: 	16px;
+		font-size: 	1.6rem;
 		li{
 			background: $extralightgrey;
 			padding: 15px 20px;
@@ -25,7 +25,7 @@
 		text-align: left;
 	}
 	h2{
-		font-size: 160%;
+		font-size: 1.6rem;
 		text-transform: uppercase;
 		font-weight: 700;
 	}
@@ -40,28 +40,28 @@
 		margin-bottom: 40px;
 	}
 	h3{
-		font-size: 300%; 
+		font-size: 3rem; 
 		font-weight: 700;
 		margin-bottom: 20px;
 		font-family: $open;
 	}
 	p{
 		line-height: 1.8;
-		font-size: 180%;
+		font-size: 1.8rem;
 	}
 
 	.benefit{
-		font-size: 	16px;
+		font-size: 	1.6rem;
 	}
 	.benefit:before{
 		content: "\f00c";
 		font-family: FontAwesome;
 		margin: 0 20px 20px 0;
-		font-size: 150%;
+		font-size: 1.5rem;
 		width: 1.7em;
 	}
 	h4{
-		font-size: 200%;
+		font-size: 2rem;
 		margin: 40px 0;
 	}
 	.services-desc-section{
@@ -74,7 +74,7 @@
 		width: 100%;
 		right: 0;
 		bottom: 0;
-		font-size: 20px;
+		font-size: 2rem;
 		text-align: center;
 		padding: 20px 0;
 		background: $green;

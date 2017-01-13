@@ -18,6 +18,7 @@ function theme_setup() {
 	add_image_size("client-quote", 80, 80, true );
 	add_image_size("client-logo", 300, 200, true );
 	add_image_size("team-member", 420, 420, true);
+	add_image_size("blog", 920, 410, true);
 
 
 	// Add default posts and comments RSS feed links to head
@@ -162,7 +163,7 @@ add_filter( 'wp_page_menu_args', 'hackeryou_page_menu_args' );
  * Sets the post excerpt length to 40 characters.
  */
 function hackeryou_excerpt_length( $length ) {
-	return 40;
+	return 25;
 }
 add_filter( 'excerpt_length', 'hackeryou_excerpt_length' );
 
@@ -170,7 +171,7 @@ add_filter( 'excerpt_length', 'hackeryou_excerpt_length' );
  * Returns a "Continue Reading" link for excerpts
  */
 function hackeryou_continue_reading_link() {
-	return ' <a href="'. get_permalink() . '">Continue reading <span class="meta-nav">&rarr;</span></a>';
+	return '';
 }
 
 /**
@@ -334,3 +335,10 @@ function wpse_128636_redirect_post() {
     exit;
   }
 }
+
+// adding svg upload capability
+function cc_mime_types($mimes) {
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');

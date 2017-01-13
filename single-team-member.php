@@ -8,7 +8,7 @@
 
 			<div class="social">
 				<?php if(get_field("team_member_email")) : ?>
-					<a href="<?php the_field('team_member_email')?>" class="fa fa-envelope"></a>
+					<a href="mailto:<?php the_field('team_member_email')?>" class="fa fa-envelope"></a>
 				<?php endif ?>
 				<?php if(get_field("team_member_linkedin")) : ?>
 					<a href="<?php the_field('team_member_linkedin')?>" class="fa fa-linkedin"></a>

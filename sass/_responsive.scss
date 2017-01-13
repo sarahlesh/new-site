@@ -114,7 +114,7 @@
 		margin-left: 15px;
 	}
 	.front-head h1{
-		font-size: 	500%;
+		font-size: 	5rem;
 	}
 	.carousel, .weDo .right{
 		width: 100%;
@@ -191,8 +191,18 @@
 	}
 
 	.footer .foot-item .signup{
-		font-size: 	370%;
+		font-size: 	3.7rem;
 	}
+
+	h1{
+		font-size: 3.5rem;
+	}
+
+	.front-head .button{
+
+	}
+
+
 
 }
 
@@ -205,15 +215,24 @@
 			padding:35px;
 		}
 
-
-		.front-head .button{
-			min-width: 140px;
-		}
 		.front-head h1{
-			font-size: 440%;
+			font-size: 4.4rem;
 		}
 		.team .meet{
 			width: 80%;
+		}
+
+		.front-head .button{
+			display: block;
+		}
+
+		.front-head .project{
+			margin-left: 0;
+			margin-top: 25px;
+		}
+
+		.front-head-content{
+			padding: 180px 0 120px
 		}
 }
 
@@ -227,10 +246,10 @@
 	}
 
 	.front-head h1{
-		font-size: 	410%;
+		font-size: 	4.1rem;
 	}
 	.front-head h2{
-		font-size: 	270%;
+		font-size: 	2.7rem;
 	}
 }
 

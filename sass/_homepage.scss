@@ -25,7 +25,7 @@
 	li{
 		opacity: 0.4; 
 		font-weight: 100;
-		font-size: 340%;
+		font-size: 3.4rem;
 		cursor: pointer;
 		span{
 			font-weight: 600;
@@ -69,7 +69,7 @@
 	height: 100%;
 	bottom: 0;
 	top:0;
-	right:0;
+	right:0; 
 	left:0; 
 	padding: 30px;
 	transition: all 0.3s;
@@ -105,7 +105,7 @@
 }
 
 .study-content-title h3{
-	font-size: 	240%;
+	font-size: 	2.4rem;
 }
 
 
@@ -117,12 +117,16 @@
   	color: black;
     background: white;
     text-align: center;
-    font-size: 250%;
+    font-size: 2.5rem;
     line-height: 1.7em;
     width: 2em;
+    font-size: 2rem;
+    line-height: 1.6em;
+    width: 1.9em;
     border-radius: 50%;
     display: inline-block;
     border: 4px solid $green;
+    margin-left:20px;
 }
 .study:hover > .study-content, .study:focus > .study-content{
 	  display: flex;
@@ -136,7 +140,7 @@
 	padding: 40px 0;
 	blockquote{
 		background: none;
-		font-size: 	350%;
+		font-size: 	3.5rem;
 		font-weight: 100;
 		text-align: left;
 		display: -webkit-flex;
@@ -174,7 +178,7 @@
 .quoted-from{
 	float: right;
 	// margin-top: -20px;
-	font-size: 140%;
+	font-size: 1.4rem;
 }
 
 .quote_name::before{
@@ -225,4 +229,43 @@ display: inline-block;
 .helped h1, .team h1{
 	margin-bottom: 40px;
   }
+
+
+  .team{
+  	clear: both;
+  	h1{
+  		text-align: center;
+  	}
+  	.team-photo{
+  		background: url(./images/background.jpg);
+  		background-repeat: no-repeat;
+  		background-size: cover;
+  		background-position: center;
+  	}
+  
+  	.meet{
+  		color: white;
+  		background: $green;
+  		width: 35%;
+  		padding: 80px 40px;
+  		float: right;
+  		.button{
+  			background: $mediumgrey;
+  			color: white;
+  			border: 1px solid white;
+  			margin-top: 40px;
+  			font-size: 14px;
+  		}
+  		h2{
+  			font-size: 24px;
+  			margin-bottom: 35px;
+  		}
+  
+  	}
+  } 
+  .team.section{
+  	padding-bottom: 0;
+  }
+  
+ 
  

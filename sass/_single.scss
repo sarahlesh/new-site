@@ -9,7 +9,14 @@
 }
 
 .arrow-direction{
-	margin-bottom: 20px;
+	margin-left: 0;
+}
+
+.arrow-direction.fa{
+	font-size: 2.6rem;
+	line-height: 37px;
+	width: 45px;
+	margin-left: 0;
 }
 
 
@@ -24,7 +31,7 @@
 			color: $lightgrey;
 			text-align: center;
 			text-transform: uppercase;
-			font-size: 120%;
+			font-size: 1.2rem;
 		}
 		&:hover{
 			color: $lightgrey;
@@ -36,11 +43,11 @@
 	background: $mediumgrey;
 	.right{
 		color:#6c909c; 
-		font-size: 140%;
+		font-size: 1.4rem;
 		text-transform: uppercase;
 		text-align: center;
 		span{
-			font-size: 1000%;
+			font-size: 10rem;
 			font-weight: 700;
 		}
 	}
@@ -56,12 +63,12 @@
 	}
 	h2{
 		color: $green;
-		font-size: 500%;
+		font-size: 5rem;
 		font-family: $bask;
 		margin-bottom: 20px;
 	}
 	h3{
-	font-size: 160%;
+	font-size: 1.6rem;
 	}
 
 	.left{
@@ -94,12 +101,12 @@
 		float: right; 
 		a.fa{
 			color: white;
-			background: $lightgrey; 
-			width:1.7em;
-			line-height: 1.7em;
+			background: #dadada; 
+			width:45px;
+			line-height: 45px;
 			text-align: center;
 			border-radius: 50%;
-			font-size: 260%;
+			font-size: 2.6rem;
 			display: inline-block;
 			margin-right: 15px;
 		}
@@ -110,7 +117,7 @@
 	text-align: center;
 	h2{
 		text-transform: uppercase;
-		font-size: 200%;
+		font-size: 2rem;
 		font-weight: 600;
 	}
 	
@@ -143,11 +150,57 @@
 	}
 	i.fa{
 	color: $green;
-	font-size: 500%;
+	font-size: 5rem;
 	display:block;
 	margin-bottom: 20px;
 	}
 	h3, p{
-		font-size: 150%;
+		font-size: 1.5rem;
+	}
+}
+
+.single-careers{
+	h1{
+		text-align: center; 
+		margin-bottom: 40px;
+	}
+	.position-deets{
+		text-transform: uppercase;
+	}
+	.apply-button{
+		text-align: center;
+		margin-bottom: 40px;
+	}
+
+	.job-info{
+		margin-bottom: 40px; 
+	}
+
+}
+
+// single post page
+
+.single-post{
+	.blog-header{
+		text-align: center;
+	}
+	p{
+		margin: 40px 0;
+	}
+	.single-post-section{
+		 padding-bottom: calc(10vh * 1);
+	}
+	h1{
+		margin: 30px 0 40px; 
+	}
+	.blogcontent{
+		img{
+			margin-bottom: 20px;
+			margin-top: 20px;
+		}
+	}
+	.size-blog{
+		width: 100% !important;
+		height: 100% !important;
 	}
 }

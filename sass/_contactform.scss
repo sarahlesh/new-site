@@ -1,0 +1,141 @@
+/*
+====================================
+Contact form
+====================================
+*/
+
+.internal{
+	overflow-y: scroll;
+	max-height:100%;
+		-webkit-overflow-scrolling: touch;
+    overflow: -moz-scrollbars-none;
+    &:-webkit-scrollbar{
+    	display: none;
+    }
+}
+.contact-form, .newsletter{
+	color: white; 
+	background: $darkgrey; 
+	text-align: center;
+	position: fixed;
+	width:100%;
+	z-index: 200;
+	overflow: hidden;
+	max-height: 100vh; 
+	top: -100vh; 
+	transition: all 0.3s;
+	.internal{ 
+			background: $darkgrey; 
+				height: 100vh;
+	}
+	.contact-form-internal{
+		position: relative;
+		padding-bottom: 40px;
+		background: $green;
+		padding-top: 30px;
+		.container{
+				position: relative;
+		}
+	}
+	.exit{
+		position: absolute;
+		top:0;
+		right:0;
+		color: white;
+		border-radius: 50%;
+		.fa{ 
+			font-size: 	6.0rem;
+		}
+	}
+	h1{
+		font-size: 5.0rem;
+		margin-bottom: 	40px;
+		span{
+			font-weight: 	600;
+		}
+	}
+	input, textarea, select{
+		border-radius: 0;
+		padding: 12px;
+		font-size: 2.0rem;
+		background: white;
+		width: 100%;
+		border: none;
+	}
+	textarea{
+		max-height: 249px;
+	}
+	.inputs{
+		padding-right: 50px;
+		input{
+			margin-bottom: 	15px;
+		}
+	}
+	.form-section{
+		flex: 1 1 300px;
+	}
+	.message{
+		flex: 2 1 300px;
+	}
+	input[type='submit']{
+		background: $darkgrey;
+		max-width: 200px;
+		float: right;
+		border: none;
+		color: white;
+		margin-top:20px;
+	}
+}
+
+.contact-footer{
+	background: white;
+	color: $darkgrey;
+	padding: 40px 0; 
+		.container{
+				justify-content: center;
+				align-content: 	space-around;	
+		}
+	.hjc-location{
+		flex: 0 1 370px;
+		h2{
+			font-size: 2.0rem;
+			font-weight: 	600;
+			margin: 25px 0 20px;
+		}
+		&:first-of-type{
+			border-right: 1px solid $lightgrey;
+		}
+		img{
+			width: 77px;
+			max-height: 55px;
+		}
+	}
+}
+
+.contact-social {
+	background: $darkgrey;
+	padding: 40px 0;
+	.fa{
+		font-size: 3.0rem;
+		color: white;
+	}
+}
+ 
+.newsletter{
+	top: -100vh;
+	.internal{
+			background: $green;
+			padding: 30px 0;
+			height: 50vh;
+			min-height: 480px;
+			.container{
+				position: relative;
+			}
+			input, select{
+				margin-bottom: 	15px;
+			}
+	}
+	.form-section{
+		padding:0 20px 20px 20px;
+	}
+} 

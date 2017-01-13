@@ -7,11 +7,11 @@
 	color: white;
 	h1{
 		font-weight: 100;
-		font-size: 570%;
+		font-size: 5.7rem;
 
 	}
 	h2{
-		font-size: 300%;
+		font-size: 3.0rem;
 		font-weight: 100;
 		color: #959494;
 		padding: 40px 0;
@@ -23,10 +23,11 @@
 		border: 1px solid white;
 		color: white;
 		text-transform: uppercase;
-		font-size: 140%;
+		font-size: 1.4rem;
 		&:hover{
 			background: $green;
 		}
+		font-size: 1.4rem
 	}
 	.project{
 		margin-left: 25px;
@@ -47,6 +48,7 @@
 	position: fixed;
 	width: 100%;
 	z-index: 100;
+	transition: all 0.3s;
 }
 
 .middle{
@@ -87,4 +89,4 @@
 //     0% { opacity:1; }
 //     50% { opacity:0; }
 //     100% { opacity:1; }
-// }
+// } 

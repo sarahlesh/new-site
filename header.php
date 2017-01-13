@@ -26,10 +26,12 @@
 
 <body <?php body_class(); ?>>
 
-<header class="full">
+<header class="full clearfix">
 <a href="#maincontent" id="skip-link" class="screen-reader-text" >Skip to main content</a>
 
 <?php require('contact-form.php') ?>
+
+<?php   require('newsletter.php') ?>
 <?php if( is_front_page() ) { require('fronthead.php'); }?>
 
 <?php if( !is_front_page() ) { require('not-front-head.php'); }?>

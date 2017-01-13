@@ -4,7 +4,7 @@
 <?php get_header(); ?>
 
 <!-- Who is HJC section -->
-
+<span id="about" class="anchor"></span>
 <section class="whoIs container section">
 	<h1>Who is <span class="green hjc">hjc?</span></h1>
 	<p>We’re a digital fundraising agency that has been serving nonprofits like yours for over two decades. From the largest charities in the world, to the “little guys” just around the corner – we’ve helped raise over a billion dollars for clients across the globe. </p>
@@ -12,6 +12,7 @@
 	<button class="green button contact-button">Tell us about your goals</button>
 </section>
 
+<span id="weDo" class="anchor"></span>
 <section class="weDo container clearfix section">
 	<h1>What do we do?</h1>
 	<div class="carousel">
@@ -48,7 +49,7 @@
 			<li class="nav-for">We <span>innovate.</span></li>
 		</ul>
 
-		<a href="" class="green button">Learn More</a>
+		<a href="<?php echo get_permalink(); ?>/storytelling" class="green button">Learn More</a>
 	</div>
 </section>
 
@@ -58,8 +59,9 @@
 	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 		<?php while( has_sub_field('case_studies') ): ?>
 			<?php $image = get_sub_field('image'); 
+				$link = get_sub_field('link_to_case_study'); 
 				$alt = $image['alt'] ?>
-			<a href="#" class="study square">
+			<a href="<?php echo $link ?>" class="study square">
 				<img src="<?php echo $image['sizes']['case-study'] ?>" alt="<?php echo $alt ?>">
 					<div class="study-content">
 						<div class="study-content-title bounceInUp">
@@ -120,27 +122,26 @@
 	</div>
 </section>
 
-<section class="home-blog section">
-	<h1>Blog</h1>
-	      <?php query_posts('posts_per_page=2'); ?>
-	        <?php if (have_posts()) : while (have_posts()) :
-	            the_post(); ?>
-							<?php $post_id = null; // current post ?>
-	                            <h2><?php the_title();?></h2>
-	                                <div class="has_image clearfix">
-	                                        <a href="<?php the_permalink(); ?>" class="">
-	                                           go to blog
-	                                        </a>
-	                                            <?php the_excerpt(); ?>
-	                                </div>
-	    <?php endwhile;
-	    endif; ?>
 
-	    <?php wp_reset_query(); ?>
-
-	
-
-</section>
+<section class="team section">
+ 	<h1>News</h1>
+  <?php query_posts('posts_per_page=1'); ?>
+					        <?php if (have_posts()) : while (have_posts()) :
+					            the_post(); ?>
+ 	<div class="team-photo clearfix" >
+ 		<div class="container">
+  			<div class="meet">
+											<?php $post_id = null; // current post ?>
+		              			<h2><?php the_title();?></h2>
+		                				<p><?php the_excerpt(); ?></p>
+		               -				<a href="<?php the_permalink(); ?>" class="button">read the story</a>
+  			</div>
+  		</div>
+  		<?php endwhile; endif; ?>
+  		 <?php wp_reset_query(); ?>
+ 	</div>
+ 
+ </section>
 
 <!-- Footer -->
 

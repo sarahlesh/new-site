@@ -32,7 +32,7 @@ get_header();  ?>
 	   <?php endwhile; endif; ?>
 	   </div>
 
-	<a href="<?php bloginfo('template_directory'); ?>/services" class="button">See Our Services</a>
+	<a href="<?php echo get_home_url(); ?>/services" class="button">See Our Services </a>
 
 	<section class="storytelling-why">
 			<h1>Why should you work with us?</h1>
