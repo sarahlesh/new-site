@@ -4,11 +4,12 @@ get_header();  ?>
 <?php $i = 1; ?>
 <?php if ( have_posts() ): while ( have_posts() ) : the_post(); ?>
 	<div class="top-section main">
-		<div class="container main archive">
+		<div class="container archive">
 			<div class="header">
 	      <h1><?php the_title(); ?></h1>
 	      <p><?php the_content(); ?></p>
 	    </div>
+	    	<button class="green button contact-button">Dare to do incredible work today</button>
 		</div>
 	</div>
 	<main class="storytelling" role="main">

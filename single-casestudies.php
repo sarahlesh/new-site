@@ -9,6 +9,7 @@
 
            <div class="container clearfix section top">
              <a href="<?php bloginfo('url'); ?>/casestudies"><i class="fa fa-arrow-left arrow-direction"></i></a>
+             <h2 class='item-title'>Case Study</h2>
              <h1><?php echo get_the_title() ?></h1>
 
              <div class="left">

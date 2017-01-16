@@ -32,7 +32,7 @@
 		<?php endif ?>
 	</div>
 
-	<div class="interesting-things">
+<!-- 	<div class="interesting-things">
 		<div class="container clearfix">
 			<div class="interesting">
 			<?php if(get_field("current_jam")) : ?>
@@ -56,7 +56,7 @@
 				<?php endif ?>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 
 

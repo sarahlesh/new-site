@@ -6,18 +6,32 @@
 						<span class="aural-only">exit</span>
 					</button>
 					<h1>Sign up for our newsletter</h1>
-					<form method="POST" action="http://hjcnm.convio.net/site/Survey">
+					<form method="POST" id="newsletter-form" action="http://hjcnm.convio.net/site/Survey" onsubmit="return validateLogin()">
+					<div id="error-log" style="font-color: red; font-size: 16px;">
+					   <p id="fnameError" class="error" style="display: none;">*Please Enter your First Name</p>
+					   <p id="lnameError" class="error" style="display: none;">*Please Enter your Last Name</p>
+					   <p id="emailError" class="error" style="display: none;">*Please Enter your Email address</p>
+					   <p id="emailValidError" class="error" style="display: none;">*Please enter a valid Email address</p>
+					   <p id="provinceError" class="error" style="display: none;">*Please Select your Province</p>
+					   <p id="phoneError" class="error" style="display: none;">*Phone Number should be in the following format: 111-111-1111 or 1111111111</p>
+					    <p id="volunteerErr" class="error" style="display: none;">*Please select if you've previously volunteered below</p>
+					  <p id="describeErr" class="error" style="display: none;">*Please select the option that best describes you below</p>
+					  <p id="commErr" class="error" style="display: none;">*Will you need a signed Community Involvement form? Please select below</p>
+					  <p id="hearErr" class="error" style="display: none;">*How did you hear about us? Please select below</p>
+
+
+					 </div>
 					<div class="flexed">
 						<div class="form-section">
 							<input type="hidden" name="cons_info_component" id="cons_info_component" value="t" />
 							<label for="cons_first_name" class="aural-only">First Name *</label>
-							<input type="text" name="cons_first_name" id="cons_first_name" placeholder="FIRST NAME" value="" />
+							<input type="text" name="cons_first_name" id="cons_first_name" placeholder="FIRST NAME*" value="" />
 
 							<label for="cons_last_name" class="aural-only">Last Name *</label>
-							<input type="text" name="cons_last_name" id="cons_last_name" placeholder="LAST NAME" />
+							<input type="text" name="cons_last_name" id="cons_last_name" placeholder="LAST NAME*" />
 
 							<label for="cons_email" class="aural-only">Email *</label>
-							<input type="text" name="cons_email" id="cons_email" placeholder="EMAIL" />
+							<input type="text" name="cons_email" id="cons_email" placeholder="EMAIL*" />
 						</div>
 						
 						<div class="form-section">

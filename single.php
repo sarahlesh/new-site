@@ -11,6 +11,7 @@
       		</div>
       	</div>
     		<div class="blog-header">
+    			<h2 class="item-title">Blog</h2>
 					<h1><?php echo get_the_title() ?></h1>
 					<?php if ( has_post_thumbnail()): ?>
 						<?php  the_post_thumbnail($size = 'blog'); ?>

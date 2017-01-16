@@ -1,9 +1,11 @@
 <?php get_header(); ?>
 
 <div class="main careers-archive archive">
-	<div class="container">
-		<h1>Careers</h1>
-		<p>Single-origin coffee tattooed VHS swag irony. Etsy ennui aesthetic fingerstache slow-carb, pickled VHS fanny pack Truffaut chambray food truck brunch post-ironic dreamcatcher.</p>
+	<div class="top-section">
+		<div class="container">
+			<h1>Careers</h1>
+			<p>Single-origin coffee tattooed VHS swag irony. Etsy ennui aesthetic fingerstache slow-carb, pickled VHS fanny pack Truffaut chambray food truck brunch post-ironic dreamcatcher.</p>
+		</div>
 	</div>
 	<ul>
 	<?php $projectQuery = new WP_Query( 

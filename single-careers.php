@@ -16,7 +16,7 @@
 			
 			<h1><?php echo get_the_title() ?></h1>
 			<div class="apply-button">
-				<button class="green button apply">apply for this position</button>
+				<a href="mailto:<?php echo get_field('send_applications_to_this_email') ?>" class="green button apply">apply for this position</a>
 			</div>
 			
 
@@ -32,22 +32,6 @@
 			<p><?php the_field("job_desciption") ?></p>
 		</div>
 
-		<?php if( get_field('we_are_looking_for') ):?>
-		<div class="job-info">
-				<p class="bold">We are looking for:</p>
-				<p><?php the_field('we_are_looking_for'); ?></p>
-		</div>
-			<?php endif; ?>
-
-		<div class="job-info">
-			<p class="bold">This position entails, but is not limited to:</p>
-				 
-			<p><?php the_field('skills_qualifications'); ?></p>
-		</div>
-		<div class="job-info">	
-			<p class="bold">Position Responsibilities:</p>
-				<p><?php the_field('position_responsibilities'); ?></p>
-		</div>
 
 		<?php if(get_field("work_environment")) : ?>
 				
@@ -55,14 +39,6 @@
 		<div class="job-info environment">
 				<p class="bold">Work Environment:</p>
 					<?php the_field("work_environment") ?>
-		</div>
-		<?php endif; ?>
-
-		<?php if(get_field("more_info")) : ?>		
-
-		<div class="job-info info">
-			
-			<?php the_field("more_info") ?>
 		</div>
 		<?php endif; ?>
 

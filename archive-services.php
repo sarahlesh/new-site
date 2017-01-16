@@ -1,11 +1,13 @@
 <?php get_header(); ?>
-<div class="main services-archive archive">
-	<div class="services-top-section">
+<div class="main services-archive archive case-studies-archive">
+	<div class="top-section">
 		<div class="container">
 			<h1>Our Services</h1>
 
 			<h2 class="green">One size doesn't fit all</h2>
 			<p>With over two decades working with all types of clients, if there’s one thing we’re sure of, it’s that no two organizations are the same. That’s why when you work with us, you can always expect unique solutions to match your needs, budget, and supporters. </p>
+
+			<button class="green button contact-button">Dare to do incredible work today</button>
 		</div>
 	</div>
 	<div class="container clearfix section services-desc-section">
@@ -73,6 +75,8 @@
 
 						
 		<?php endwhile; endif; ?>
+			
+
 		</div>
 	</div>
 </div>

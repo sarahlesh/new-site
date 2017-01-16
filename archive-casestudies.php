@@ -1,11 +1,12 @@
 <?php get_header(); ?>
 
 <div class="main case-studies-archive archive">
-
-	<div class="container archive-copy">
-		<h1>Case Studies</h1>
-		<p>What happens when you put us in a room with daring clients? Inspiring work we’re proud to share.</p>
-		<button class="green button contact-button">Dare to do incredible work today</button>
+	<div class="top-section">
+		<div class="container archive-copy">
+			<h1>Case Studies</h1>
+			<p>What happens when you put us in a room with daring clients? Inspiring work we’re proud to share.</p>
+			<button class="green button contact-button">Dare to do incredible work today</button>
+		</div>
 	</div>
 	<div class="boxes clearfix">
 

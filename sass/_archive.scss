@@ -1,17 +1,8 @@
-.case-studies-archive{
-	text-align: center;
-	.button{
-		margin-bottom: 80px;
-	}
-}
 .archive{
 	text-align: center;
 	.archive-copy p{
 		margin: 20px 0 40px;
 	}
-	// h1{
-	// 	margin-top: 60px;
-	// }
 }
 
 .teammember-archive{
@@ -48,12 +39,6 @@
  }
 
  .careers-archive{
- 	h1{
- 		margin-bottom: 40px;
- 	}
- 	p{
- 		margin-bottom: 60px;
- 	}
 
  	li{
  		display:block;
@@ -87,6 +72,12 @@
 	background-size: cover;
 	background-position: center;
 	min-height: 350px;
+	a{
+		color: white;
+		&:hover{
+			color: white;
+		}
+	}
 	.study-content-title{
 		align-items: flex-end;
 	}
@@ -101,3 +92,4 @@
 }
 
 
+	

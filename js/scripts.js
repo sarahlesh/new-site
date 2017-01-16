@@ -20,7 +20,7 @@ $(function(){
 	});
 
 	var close = function(){
-		$('.navigation').slideToggle( function(){
+		$('.navigation').slideToggle(function(){
 			$(this).addClass("none");
 		}, function(){
 			$('.navigation .container').toggleClass("flexed animated")
@@ -33,6 +33,8 @@ $(function(){
 				$(menu).removeClass("none").animate({
 					"top":0
 				}, 100);
+				console.log(menu + " .exit")
+				$(menu + " .exit").focus();
 			})
 	}
 
@@ -45,12 +47,12 @@ $(function(){
 				})
 	}
 
+// close menu when focusout
 	openMenu(".contact-button", ".contact-form");
 	openMenu(".signup", ".newsletter");
 
 	closeMenu(".exit" ,".newsletter");
-	closeMenu(".exit", ".contact-form")
-
+	closeMenu(".exit", ".contact-form");
 
 
 	// change of .logobar color on scroll 
@@ -333,5 +335,47 @@ function validateForm(){
     return true;
   }
 }
+// validate form on submit before submitting
+	function validateForm(e){
+	  var chk = 0;
+	  var fname = $("#cons_first_name").val();
+	  var lname = $("#cons_last_name").val();
+	  var email = $("#cons_email").val();
+	  var emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+		 $(".error").css("display", "none");
+	  var chk = 0;
 
+	  var showErr = function(err){
+	    $("#error-log").css("display", "block")
+	    $(err).css("display", "block");
+	    chk = chk + 1;
+	  }
+
+	  if( fname==null || fname==""){
+	    showErr("#fnameError")
+	  } 
+	  if(lname==null || lname==""){
+	    showErr("#lnameError")
+	  }
+
+	  if(email == null || email == ""){
+	    showErr("#emailError")
+	  } 
+	  if(email !="" && !emailPattern.test(email)){
+	    shoeErr("#emailValidError")
+	  }
+	  if(chk >= 1){
+	    console.log(chk)
+	    e.preventDefault();
+	    $('html, body').animate({ scrollTop: $('#error-log').offset().top }, 'slow');
+	    return false;
+	  }
+	  if(chk == 0){
+	    console.log("go");
+	    return true;
+	  }
+	}
+		 $("#newsletter-form").submit(function(e){
+	    validateForm(e);
+	  })
 });
