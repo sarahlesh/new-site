@@ -351,3 +351,16 @@ function remove_width_attribute( $html ) {
    $html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
    return $html;
 }
+
+// hide user name for WP protection
+add_action(‘template_redirect’, ‘bwp_template_redirect’);
+function bwp_template_redirect()
+{
+if (is_author())
+{
+wp_redirect( home_url() ); exit;
+}
+}
+
+// update plugins automatically
+add_filter( 'auto_update_plugin', '__return_true' );

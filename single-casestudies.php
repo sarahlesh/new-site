@@ -33,8 +33,28 @@
                 <?php if( get_field('our_approach') ): ?>
                   <a href="#approach" class="green button approach-button case-button">Our Approach</a>
                 <?php endif; ?>
-                <button class="green button contact-us case-button">Let's Start a project</button>
+                <button class="green button contact-button case-button">Let's Start a project</button>
               </div>
+
+            <div class="flexed mockups">
+            <?php if( get_field('mock_up_in_desktop') ): 
+              $imageDesk = get_field('mock_up_in_desktop'); 
+            ?>
+              <div class="desktop mockup">
+                <img src="<?php echo $imageDesk['url'] ?>" alt="<?php echo $imageDesk['alt'] ?>">
+              </div>
+            <?php endif; ?>
+
+            <?php if( get_field('mock_up_in_tablet') ): 
+              $imageMob = get_field('mock_up_in_tablet'); 
+            ?>
+              <div class="mobile mockup">
+                <img src="<?php echo $imageMob['url'] ?>" alt="<?php echo $imageMob['alt'] ?>">
+              </div>
+            <?php endif; ?>
+              
+              
+            </div>
            </div>
            <?php if( get_field('our_approach') ): ?>
             <span id="approach" class="spacer" ></span>

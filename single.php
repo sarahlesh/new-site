@@ -6,8 +6,8 @@
       		<a href="<?php bloginfo('url'); ?>/blog"><i class="fa fa-arrow-left arrow-direction"></i></a>
 
       		<div class="social">
-      			<a href="http://www.facebook.com/share.php?u=<?php echo get_the_permalink(); ?>&title=<?php echo get_the_title() ?>" class="fa fa-facebook" onclick="window.open(this.href,'window','width=640,height=480,resizable,scrollbars'); return false;"><span class="aural-only">Click to share this on facebook</span></a>
-      			<a href="https://twitter.com/intent/tweet?status=<?php echo get_the_title() ?>%20<?php echo get_the_permalink(); ?>" class="fa fa-twitter"><span class="aural-only">Click to share this on twitter</span></a>
+      			<a href="http://www.facebook.com/share.php?u=<?php echo get_the_permalink(); ?>&title=<?php echo get_the_title() ?>&picture=<?php the_post_thumbnail_url('large'); ?>&description=<?php echo get_the_excerpt() ?>" class="fa fa-facebook" onclick="window.open(this.href,'window','width=640,height=480,resizable,scrollbars'); return false;"><span class="aural-only">Click to share this on facebook</span></a>
+      			<a href="https://twitter.com/intent/tweet?status=<?php echo get_the_title() ?>%20<?php echo get_the_permalink(); ?>" class="fa fa-twitter" target="_blank" onclick="window.open(this.href,'window','width=640,height=480,resizable,scrollbars') ;return false;"><span class="aural-only">Click to share this on twitter</span></a>
       		</div>
       	</div>
     		<div class="blog-header">
